@@ -29,7 +29,23 @@
       ];
       let count = 0;
 
-      body.addEventListener("click", () => {
+      //   body.addEventListener("click", () => {
+      //     if (count >= colors.length) {
+      //       count = 0;
+      //     } else {
+      //       let same_color = colors[count];
+      //       body.style.backgroundColor = colors[count];
+      //       same_color = name.textContent = colors[count];
+      //       if (same_color == "black") {
+      //         name.style.color = "white";
+      //       } else {
+      //         name.style.color = "black";
+      //       }
+      //       count++;
+      //     }
+      //   });
+
+      setInterval(() => {
         if (count >= colors.length) {
           count = 0;
         } else {
@@ -43,7 +59,7 @@
           }
           count++;
         }
-      });
+      }, 1000);
     </script>
   </body>
 </html>

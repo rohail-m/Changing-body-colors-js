@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color change</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <h1 class="name"></h1>
+    <script>
+      let body = document.body;
+      let name = document.querySelector(".name");
+      let colors = [
+        "red",
+        "blue",
+        "orange",
+        "pink",
+        "purple",
+        "black",
+        "brown",
+        "gray",
+        "green",
+        "white",
+      ];
+      let count = 0;
+
+      body.addEventListener("click", () => {
+        if (count >= colors.length) {
+          count = 0;
+        } else {
+          let same_color = colors[count];
+          body.style.backgroundColor = colors[count];
+          same_color = name.textContent = colors[count];
+          if (same_color == "black") {
+            name.style.color = "white";
+          } else {
+            name.style.color = "black";
+          }
+          count++;
+        }
+      });
+    </script>
+  </body>
+</html>
